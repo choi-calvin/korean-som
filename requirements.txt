@@ -1,0 +1,6 @@
+konlpy==0.5.2
+matplotlib==3.3.2
+MiniSom==2.2.8
+mlxtend==0.18.0
+numpy==1.19.2
+scikit-learn==0.23.2
