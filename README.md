@@ -1,6 +1,6 @@
 # Modeling semantics from syntax in the Korean language
 
-This is the repository containing the code used to produce the results in the paper "Modeling semantics from syntax in the Korean language".
+This is the repository containing the code used to produce the results in the paper "Modeling semantics from syntax in the Korean language". Transcripts from conversations between children and their parents in Korean are fed into a contextual self-organizing map to learn semantic representations of the Korean language.
 
 ## Requirements and Installation
 
