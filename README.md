@@ -12,6 +12,8 @@ In addition to the standard KoNLPy library, the scripts require the Korean MeCab
 
 ## Replicating the results
 
+This section goes through the directory structure and files included in this repository.
+
 ### Data
 
 A copy of the data used in the paper is stored in `Ko/`. This was retrieved from
@@ -23,6 +25,10 @@ at [this link](https://childes.talkbank.org/access/EastAsian/Korean/Ko.html) on 
 ### Tutorial
 
 A notebook tutorial can be found in `tutorial.ipynb`. This notebook goes through the processes with which the contextual SOMs were trained on the Ko corpus, including data extraction, preprocessing, training, and evaluation.
+
+### Paper results
+
+The exact code used to produce the results in the paper can be found in `paper_results/`. This directory includes `contextual_som.py`, an aggregated Python script of the cells in `tutorial.ipynb`; and `main.ipynb`, the exact notebook used to produce the results in the paper. Note that due to the randomness in the algorithm, re-running `main.ipynb` may produce slightly different outputs than in the paper.
 
 ## Contributions
 
