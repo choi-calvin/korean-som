@@ -115,13 +115,16 @@ class ContextualSom:
 
         positions = np.asarray(positions)
         labels = np.asarray(labels)
-
         label_ind = np.asarray([self._all_labels.index(l) for l in labels])
 
-        knn = KNeighborsClassifier(n_neighbors=6)  # 6 neighbours since 1 will be the target itself
-        knn.fit(positions, label_ind)
+        predictions = []
+        for ind, p in enumerate(positions):
+            knn = KNeighborsClassifier(n_neighbors=5)
+            knn.fit(np.delete(positions, ind, axis=0), np.delete(label_ind, ind, axis=0))
+            predictions.append(knn.predict([p])[0])
 
-        predictions = knn.predict(positions)
+        predictions = np.asarray(predictions)
+        
         scores = {}
 
         for label in range(len(self._all_labels)):
